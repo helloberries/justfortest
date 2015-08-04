@@ -1,9 +1,7 @@
 window.onload = function () {
-	var numbers = ['zero', 'one', 'two', 'three', 'four'];
-	delete numbers[2];
-	numbers.splice(2,1);
+	
 
-	var result = numbers;
+	var result;
 
 	// 显示结果
 	var btn = document.getElementById('btn');
