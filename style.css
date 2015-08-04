@@ -1,0 +1,19 @@
+#textarea {
+	margin-top: 50px;
+	width: 300px;
+	height: 150px;
+	border:2px solid black;
+}
+
+#btn {
+	display: block;
+	margin-top: 20px;
+	float: left;
+}
+
+#clearbtn {
+	display: block;
+	margin-top: 20px;
+	float: left;
+	margin-left: 10px;
+}
