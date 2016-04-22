@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>插件式表单验证</title>
+</head>
+<body>
+用户名： <input id="username" type="text"></input>
+密码： <input id="password" type="password"></input>
+<input id="submitBtn" type="button" value="提交"></input>
+<script>
+	var username = document.getElementById('username'),
+		password = document.getElementById('password'),
+		submitBtn = document.getElementById('submitBtn');
+
+	Function.prototype.before = function (beforefn) {
+		var __self = this;
+		return function () {
+			if (beforefn.apply(this,arguments) === false) {
+				return;
+			}
+			return __self.apply(this, arguments);
+		};
+	};
+
+	var validata = function () {
+		if (username.value === '') {
+			alert('用户名不能为空');
+			return false;
+		}
+		if (password.value === '') {
+			alert('密码不能为空');
+			return false;
+		}
+	};
+	var formSubmit = function () {
+		var param = {
+			username: username.value;
+			password: password.value
+		};
+		ajax(); // ajax具体实现略
+	};
+
+	formSubmit = formSubmit.before(validata);
+	submitBtn.onclick = function () {
+		formSubmit();
+	};
+</script>
+</body>
+</html>
