@@ -33,4 +33,4 @@ Press Enter
 `git push`
 
 #### 7. 查看有没有contribution
-:tada::tada::tada:
+:tada::smile:
