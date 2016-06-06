@@ -9,8 +9,7 @@
 `git clone git@github.com:YourDirectory/YourProject.git`
 
 #### 3. 确认地址(提交时出现error可选用)
-`git remote set-url origin git
-@github.com:YourDirectory/YourProject.git`
+`git remote set-url origin git@github.com:YourDirectory/YourProject.git`
 
 #### 4. add文件
 `git add .` add上所有文件
